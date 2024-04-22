@@ -1,4 +1,6 @@
-package com.ss.two;
+package com.ss.main;
+
+import com.ss.two.*;
 
 public class TestArthropod
 {

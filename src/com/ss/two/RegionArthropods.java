@@ -49,4 +49,19 @@ public class RegionArthropods {
         }
         return temp;
     }
+    public String numberEmployees() {
+        int arachnid = 0;
+        int crustacean = 0;
+        int insect = 0;
+        for (Arthropod arthropod : arthropods) {
+            if (arthropod instanceof Arachnid) {
+                arachnid++;
+            } else if (arthropod instanceof Crustacean) {
+                crustacean++;
+            } else if (arthropod instanceof Insect) {
+                insect++;
+            }
+        }
+        return String.format("Паукообразные: %d, ракообразные: %d, насекомые: %d", arachnid, crustacean, insect);
+    }
 }
