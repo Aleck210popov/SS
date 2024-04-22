@@ -1,7 +1,6 @@
 package com.ss.graphical;
 
 import com.ss.one.Triangle;
-import com.ss.two.Arthropod;
 import com.ss.two.RegionArthropods;
 
 public class GraphicalInterface {

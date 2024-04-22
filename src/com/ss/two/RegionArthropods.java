@@ -64,4 +64,13 @@ public class RegionArthropods {
         }
         return String.format("Паукообразные: %d, ракообразные: %d, насекомые: %d", arachnid, crustacean, insect);
     }
+    public String[] getNameArthropod() {
+        String[] temp = new String[numArthropods];
+        int index = 0;
+        for (Arthropod arthropod : arthropods) {
+            temp[index] = arthropod.getName();
+            index++;
+        }
+        return temp;
+    }
 }

@@ -14,7 +14,6 @@ public class Main {
         region[1] = arac2;
         region[2] = inse2;
         RegionArthropods obl = new RegionArthropods(3, region);
-
         Triangle t4 = new Triangle (5, 3, 5);
 
 

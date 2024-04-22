@@ -116,20 +116,4 @@ public class Triangle {
     public boolean isRectangular() {
         return (Math.abs(angle1() - 90) <= 0.000001);
     }
-
-    public String getDataTriangle(Triangle triangle) {
-        double perimeter = triangle.perimeter();
-        double surface = triangle.surface();
-        boolean isEquilateral = triangle.isEquilateral();
-        boolean isIsosceles = triangle.isIsosceles();
-        boolean isRectangular = triangle.isRectangular();
-
-        return String.format("Периметр: %.2f, площадь: %.2f," +
-                        " равносторонний: %s, равнобедренный: %s, прямоугольный: %s",
-                triangle.perimeter(),
-                triangle.surface(),
-                triangle.isEquilateral() ? "Да" : "Нет",
-                triangle.isIsosceles() ? "Да" : "Нет",
-                triangle.isRectangular() ? "Да" : "Нет");
-    }
 }

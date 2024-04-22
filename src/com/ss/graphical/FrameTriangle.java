@@ -32,17 +32,19 @@ public class FrameTriangle extends JFrame {
         private final JLabel labelTriangle;
         private final JButton buttonTriangle;
         private final JLabel labelDataTriangle;
+        private boolean isButtonClick;
         {
             labelTriangle = new JLabel("Треугольник");
             buttonTriangle = new JButton("Показать данные");
             labelDataTriangle = new JLabel();
+            isButtonClick = false;
         }
         public PanelMain() {
             this.setLayout(new GridLayout(3 ,1));
             this.add(labelTriangle);
             this.add(buttonTriangle);
             this.add(labelDataTriangle);
-            labelTriangle.setFont(new Font("Dialog", Font.PLAIN, 14));
+            labelTriangle.setFont(new Font("Dialog", Font.PLAIN, 28));
             labelTriangle.setHorizontalAlignment(JLabel.CENTER);
             labelTriangle.setVerticalAlignment(JLabel.CENTER);
             buttonTriangle.setHorizontalAlignment(JLabel.CENTER);
@@ -54,7 +56,22 @@ public class FrameTriangle extends JFrame {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    labelDataTriangle.setText(triangle.getDataTriangle(triangle));
+                    if (isButtonClick) {
+                        labelDataTriangle.setText("");
+                        buttonTriangle.setText("Показать данные");
+                        isButtonClick = false;
+                    } else {
+                        String text = String.format("Периметр: %.2f, площадь: %.2f," +
+                                        " равносторонний: %s, равнобедренный: %s, прямоугольный: %s",
+                                triangle.perimeter(),
+                                triangle.surface(),
+                                triangle.isEquilateral() ? "Да" : "Нет",
+                                triangle.isIsosceles() ? "Да" : "Нет",
+                                triangle.isRectangular() ? "Да" : "Нет");
+                        labelDataTriangle.setText(text);
+                        buttonTriangle.setText("Скрыть данные");
+                        isButtonClick = true;
+                    }
                 }
             });
         }
