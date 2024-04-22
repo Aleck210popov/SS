@@ -35,11 +35,11 @@ public class RegionArthropods {
     }
     
     public String toString() {
-        String temp = "Regional arthropods:\n";
+        StringBuilder temp = new StringBuilder("Regional arthropods:\n");
         for (int i = 0; i < numArthropods; i++) {
-            temp += arthropods[i];
+            temp.append(arthropods[i]);
         }
-        return temp;
+        return temp.toString();
     }
     
     public int calcLegs() {

@@ -2,6 +2,7 @@ package com.ss.graphical;
 
 import com.ss.one.Triangle;
 import com.ss.two.Arthropod;
+import com.ss.two.RegionArthropods;
 
 public class GraphicalInterface {
     private final FrameMain fr;
@@ -13,12 +14,12 @@ public class GraphicalInterface {
         fr = new FrameMain(triangle);
         fr.setVisible(true);
     }
-    public GraphicalInterface(Arthropod arthropod){
-        fr = new FrameMain(arthropod);
+    public GraphicalInterface(RegionArthropods regionArthropods){
+        fr = new FrameMain(regionArthropods);
         fr.setVisible(true);
     }
-    public GraphicalInterface(Triangle triangle, Arthropod arthropod){
-        fr = new FrameMain(triangle, arthropod);
+    public GraphicalInterface(Triangle triangle, RegionArthropods regionArthropods){
+        fr = new FrameMain(triangle, regionArthropods);
         fr.setVisible(true);
     }
 }

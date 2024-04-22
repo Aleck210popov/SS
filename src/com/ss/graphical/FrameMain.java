@@ -2,6 +2,7 @@ package com.ss.graphical;
 
 import com.ss.one.Triangle;
 import com.ss.two.Arthropod;
+import com.ss.two.RegionArthropods;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +31,7 @@ public class FrameMain extends JFrame{
     }
     FrameMain(Triangle triangle){
         super("Главное меню");
-        JButton buttonTriangle = new JButton("Штат сотрудников");
+        JButton buttonTriangle = new JButton("Треугольник");
         panelMaster.add(buttonTriangle);
         buttonTriangle.setBounds(100 , 80, this.getWidth()-200, this.getHeight()-200);
         FrameTriangle frameTriangle = FrameTriangle.getSingleton(triangle);
@@ -44,12 +45,12 @@ public class FrameMain extends JFrame{
         });
     }
 
-    FrameMain(Arthropod arthropod) {
+    FrameMain(RegionArthropods regionArthropods) {
         super("Главное меню");
-        JButton buttonArthropod = new JButton("Тригонаметрически числа");
+        JButton buttonArthropod = new JButton("Регион членистоногих");
         panelMaster.add(buttonArthropod);
         buttonArthropod.setBounds(100, 80, this.getWidth() - 200, this.getHeight() - 200);
-        FrameArthropod frameArthropod = FrameArthropod.getSingleton(arthropod);
+        FrameRegionArthropods frameArthropod = FrameRegionArthropods.getSingleton(regionArthropods);
         frameArthropod.setVisible(false);
         buttonArthropod.addActionListener(new ActionListener() {
             @Override
@@ -58,17 +59,17 @@ public class FrameMain extends JFrame{
             }
         });
     }
-    FrameMain(Triangle triangle, Arthropod arthropod){
+    FrameMain(Triangle triangle, RegionArthropods regionArthropods){
         super("Главное меню");
-        JButton buttonTriangle = new JButton("Штат сотрудников");
-        JButton buttonArthropod = new JButton("Тригонаметрически числа");
+        JButton buttonTriangle = new JButton("Треугольник");
+        JButton buttonArthropod = new JButton("Регион членистоногих");
         panelMaster.add(buttonTriangle);
         buttonTriangle.setBounds(100 , 50, this.getWidth()-200, 115);
         panelMaster.add(buttonArthropod);
         buttonArthropod.setBounds(100, 215, this.getWidth()-200, 115);
         FrameTriangle frameTriangle = FrameTriangle.getSingleton(triangle);
         frameTriangle.setVisible(false);
-        FrameArthropod frameArthropod = FrameArthropod.getSingleton(arthropod);
+        FrameRegionArthropods frameArthropod = FrameRegionArthropods.getSingleton(regionArthropods);
         frameArthropod.setVisible(false);
 
         buttonTriangle.addActionListener(new ActionListener() {
