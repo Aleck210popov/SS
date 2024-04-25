@@ -15,7 +15,7 @@ public class FrameMain extends JFrame{
     {
         panelMaster = new JPanel();
         this.add(panelMaster);
-        this.setSize(600, 400);
+        this.setSize(600, 700);
         panelMaster.setBorder(BorderFactory.createLineBorder(Color.black));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panelMaster.setLayout(null);
@@ -83,6 +83,44 @@ public class FrameMain extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frameArthropod.setVisible(true);
+            }
+        });
+    }
+    FrameMain(Triangle triangle, RegionArthropods regionArthropods, boolean isLanguage) {
+        super("Главное меню");
+        JButton buttonTriangle = new JButton("Треугольник");
+        JButton buttonArthropod = new JButton("Регион членистоногих");
+        JButton buttonLanguage = new JButton("Словарь");
+        panelMaster.add(buttonTriangle);
+        buttonTriangle.setBounds(100 , 50, this.getWidth()-200, 115);
+        panelMaster.add(buttonArthropod);
+        buttonArthropod.setBounds(100, 215, this.getWidth()-200, 115);
+        panelMaster.add(buttonLanguage);
+        buttonLanguage.setBounds(100, 415, this.getWidth()-200, 115);
+        FrameTriangle frameTriangle = FrameTriangle.getSingleton(triangle);
+        frameTriangle.setVisible(false);
+        FrameRegionArthropods frameArthropod = FrameRegionArthropods.getSingleton(regionArthropods);
+        frameArthropod.setVisible(false);
+        FrameLanguage frameLanguage = FrameLanguage.getSingleton();
+        frameLanguage.setVisible(false);
+
+        buttonTriangle.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameTriangle.setVisible(true);
+            }
+        });
+
+        buttonArthropod.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameArthropod.setVisible(true);
+            }
+        });
+        buttonLanguage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameLanguage.setVisible(true);
             }
         });
     }

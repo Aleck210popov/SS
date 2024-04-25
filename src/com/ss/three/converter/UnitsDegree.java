@@ -1,4 +1,4 @@
-package com.javauser.narfu.three.converter;
+package com.ss.three.converter;
 
 public enum UnitsDegree {
     KELVIN,

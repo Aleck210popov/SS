@@ -1,11 +1,11 @@
-package com.javauser.narfu.three.lambda;
+package com.ss.three.lambda;
 
 import java.util.function.Predicate;
 
 public class Filter {
     public static void startFilter() {
         // Пример использования filter для удаления пустых строк из массива строк
-        String[] strings = {"hello", "", "world", "", "java"};
+        String[] strings = {"1", "2", "4"};
         filter(strings, s -> !s.isEmpty());
 
         // Печатаем отфильтрованные строки

@@ -1,4 +1,6 @@
-package com.javauser.narfu.three.converter;
+package com.ss.three.converter;
+
+
 
 public class BaseConverter {
     public static double convert(double temperature, UnitsDegree fromUnit, UnitsDegree toUnit) {
@@ -52,7 +54,9 @@ public class BaseConverter {
         double temperature = 25.0;
 
         // Примеры конвертации
-        System.out.println(temperature + " градусов по Цельсию равны " + convert(temperature, UnitsDegree.CELSIUS, UnitsDegree.KELVIN) + " Кельвинам");
-        System.out.println(temperature + " градусов по Цельсию равны " + convert(temperature, UnitsDegree.CELSIUS, UnitsDegree.FAHRENHEIT) + " Фаренгейтам");
+        System.out.println(temperature + " градусов по Цельсию равны " + convert(temperature, UnitsDegree.CELSIUS,
+                UnitsDegree.KELVIN) + " Кельвинам");
+        System.out.println(temperature + " градусов по Цельсию равны " + convert(temperature, UnitsDegree.CELSIUS,
+                UnitsDegree.FAHRENHEIT) + " Фаренгейтам");
     }
 }

@@ -17,7 +17,7 @@ public class Main {
         Triangle t4 = new Triangle (5, 3, 5);
 
 
-        startGraphicalInterface(t4, obl);
+        startGraphicalInterface(t4, obl, true);
     }
     private static void startGraphicalInterface(){
         GraphicalInterface graphicalInterface = new GraphicalInterface();
@@ -30,5 +30,8 @@ public class Main {
     }
     private static void startGraphicalInterface(Triangle triangle, RegionArthropods regionArthropods){
         GraphicalInterface graphicalInterface = new GraphicalInterface(triangle, regionArthropods);
+    }
+    private static void startGraphicalInterface(Triangle triangle, RegionArthropods regionArthropods, boolean isLanguage){
+        GraphicalInterface graphicalInterface = new GraphicalInterface(triangle, regionArthropods, isLanguage);
     }
 }

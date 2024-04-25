@@ -1,4 +1,4 @@
-package com.javauser.narfu.three.lambda;
+package com.ss.three.lambda;
 
 import java.util.function.Function;
 

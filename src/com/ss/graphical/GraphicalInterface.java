@@ -21,4 +21,8 @@ public class GraphicalInterface {
         fr = new FrameMain(triangle, regionArthropods);
         fr.setVisible(true);
     }
+    public GraphicalInterface(Triangle triangle, RegionArthropods regionArthropods, boolean isLanguage){
+        fr = new FrameMain(triangle, regionArthropods, isLanguage);
+        fr.setVisible(true);
+    }
 }

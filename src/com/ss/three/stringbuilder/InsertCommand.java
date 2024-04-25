@@ -1,4 +1,4 @@
-package com.javauser.narfu.three.stringbuilder;
+package com.ss.three.stringbuilder;
 
 public class InsertCommand implements ICommand {
     private int length;

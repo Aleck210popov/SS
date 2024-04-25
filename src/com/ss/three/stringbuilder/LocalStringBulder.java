@@ -1,4 +1,4 @@
-package com.javauser.narfu.three.stringbuilder;
+package com.ss.three.stringbuilder;
 
 import java.util.Stack;
 

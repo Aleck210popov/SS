@@ -1,4 +1,4 @@
-package com.javauser.narfu.three.lambda;
+package com.ss.three.lambda;
 
 public class LambdaMain {
     public static void lambdaStart(){

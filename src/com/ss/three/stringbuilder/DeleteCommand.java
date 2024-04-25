@@ -1,4 +1,4 @@
-package com.javauser.narfu.three.stringbuilder;
+package com.ss.three.stringbuilder;
 
 public class DeleteCommand implements ICommand{
     private int start;
