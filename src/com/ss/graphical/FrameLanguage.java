@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class FrameLanguage extends JFrame {
     private final PanelMain panelMain;
@@ -30,7 +31,7 @@ public class FrameLanguage extends JFrame {
         return singleton;
     }
 
-    private class PanelMain extends JPanel {
+    private static class PanelMain extends JPanel {
         private final JTextField textAreaInputText;
         private final JButton buttonTranslation;
         private final JLabel labelOutputText;
@@ -63,7 +64,8 @@ public class FrameLanguage extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     labelOutputText.setText(Dictionary.translation(textAreaInputText.getText(),
-                (Language) comboBoxWith.getSelectedItem(), (Language) comboBoxTo.getSelectedItem()));
+                            (Language) Objects.requireNonNull(comboBoxWith.getSelectedItem()),
+                            (Language) Objects.requireNonNull(comboBoxTo.getSelectedItem())));
                 }
             });
         }
